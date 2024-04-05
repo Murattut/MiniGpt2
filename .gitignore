@@ -1,0 +1,9 @@
+Mojo_experimantel
+.venv
+char_base
+sub_word_base
+__pycache__
+
+old data.py
+*mojo
+.DS_Store
