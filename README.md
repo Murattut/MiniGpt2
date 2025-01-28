@@ -41,16 +41,12 @@ To use, follow these steps:
    
 
 ## Usage (under development)
-- Explain how to use your GPT-2 variant, including any command-line arguments or configuration options.
-- Provide examples of how to generate text or fine-tune the model.
 - For example:
   ```bash
   python generate_text.py --input_text "Once upon a time, there was a"
   ```
 
 ## Training (under development)
-- If applicable, provide instructions for training your GPT-2 variant on custom datasets.
-- Include details such as data preprocessing, training parameters, and any additional steps required.
 - For example:
   ```bash
   python train.py --dataset_path /path/to/dataset --num_epochs 10
@@ -58,7 +54,7 @@ To use, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to RustGpt, please open an issue to discuss the changes you'd like to make or submit a pull request.
+Contributions are welcome! If you'd like to contribute to MiniGpt2, please open an issue to discuss the changes you'd like to make or submit a pull request.
 
 ## License
 
