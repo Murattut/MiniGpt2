@@ -17,7 +17,7 @@ max_iters = config_model.max_iters
 eval_interval = config_model.eval_interval
 
 
-def performance_mod(model: torch.nn, optimizer: torch.optim):
+def performance_mod(model: torch.nn.Module, optimizer: torch.optim.Optimizer):
     losses = {}
     temp_train_pointer = 0
     temp_val_pointer = 0
@@ -47,7 +47,7 @@ def performance_mod(model: torch.nn, optimizer: torch.optim):
     return model, losses
 
 
-def developer_mod(model: torch.nn, optimizer: torch.optim):
+def developer_mod(model: torch.nn.Module, optimizer: torch.optim.Optimizer):
     losses = {}
     temp_train_pointer = 0
     temp_val_pointer = 0
@@ -77,7 +77,7 @@ def developer_mod(model: torch.nn, optimizer: torch.optim):
     return model, losses
 
 
-def generate_token(model: torch.nn, prompt: str):
+def generate_token(model: torch.nn.Module, prompt: str):
     model.eval()
     context = torch.tensor(encode(prompt.lower()), dtype=torch.long, device=device)
     generated_data = model.generate(context.unsqueeze(0), max_new_tokens=50)[0].tolist()
@@ -85,7 +85,7 @@ def generate_token(model: torch.nn, prompt: str):
     print(generated_words)
 
 
-def save_model(model: torch.nn):
+def save_model(model: torch.nn.Module):
     with open("Model/gpt2_v1.pkl", "wb") as file:
         pickle.dump(model, file)
 

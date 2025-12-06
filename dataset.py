@@ -42,7 +42,7 @@ def read_file(file_root, file_pointer):
                     if len(temp_list) >= block_size * batch_size + 1:
                         return temp_list, f.tell()
             line = f.readline()
-    #return temp_list, None
+    return temp_list, None  # Return empty list instead of None
 
 
 def decode(l: list):
